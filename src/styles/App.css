@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Global Styles */
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #0f0f0f;
+}
+
+/* Shadows */
+
+.text-shadow {
+  text-shadow: 0 0 5px rgb(218, 218, 218), 0 0 10px rgb(187, 187, 187),
+    0 0 15px rgb(145, 145, 145), 0 0 20px rgb(131, 131, 131);
+}
+
+.box-shadow {
+  box-shadow: 0 0 5px rgb(218, 218, 218), 0 0 10px rgb(187, 187, 187),
+    0 0 15px rgb(145, 145, 145), 0 0 20px rgb(131, 131, 131);
+}
+
+.icon-shadow {
+  filter: drop-shadow(0 0 2px rgb(218, 218, 218))
+    drop-shadow(0 0 8px rgb(187, 187, 187))
+    drop-shadow(0 0 10px rgb(145, 145, 145));
+}
+
+@keyframes border-circle {
+  0% {
+    box-shadow: 0 0 10px rgb(131, 131, 131), 0 0 20px rgb(102, 102, 102),
+      0 0 40px rgb(94, 94, 94);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgb(131, 131, 131), 0 0 30px rgb(102, 102, 102),
+      0 0 50px rgb(94, 94, 94);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgb(131, 131, 131), 0 0 20px rgb(102, 102, 102),
+      0 0 40px rgb(94, 94, 94);
+  }
+}
