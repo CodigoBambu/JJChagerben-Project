@@ -21,7 +21,7 @@ const Logo = () => {
         href="/"
         className="text-[#141418] font-bold group-hover:text-gray-100 text-shadow transition-colors duration-200"
       >
-        CodigoBambu
+        JJChagerben
       </a>
     </div>
   );

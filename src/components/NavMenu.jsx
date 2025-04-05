@@ -48,7 +48,7 @@ const NavMenu = () => {
   ];
 
   return (
-    <nav className="relative p-4 justify-center">
+    <nav className="relative p-4 justify-center z-10">
       <div className="lg:hidden absolute top-4 right-4 icon-shadow ">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
