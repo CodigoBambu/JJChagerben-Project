@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const Button = ({
   text,
   onClick,
-  internalLink, 
-  externalLink, 
-  type = 'button',
-  className = '',
+  internalLink,
+  externalLink,
+  type = "button",
+  className = "",
 }) => {
   const defaultStyles = `
     px-8 py-4 font-bold rounded-xl relative z-20 m-5
@@ -20,7 +20,7 @@ const Button = ({
     const handleScroll = () => {
       const element = document.getElementById(internalLink);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     };
 

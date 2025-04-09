@@ -5,17 +5,17 @@ const CountdownCircle = ({ label, value, dotTransform, strokeDashoffset }) => {
     <div className="relative w-full h-full sm:w-40 flex items-center justify-center text-shadow z-10">
       <svg
         className="w-full h-full transform rotate-[-90deg] circle-shadow"
-        viewBox="0 0 140 140" 
+        viewBox="0 0 140 140"
       >
         <circle
-          cx="70" 
-          cy="70" 
+          cx="70"
+          cy="70"
           r="70"
           className="stroke-[#252525] stroke-[15] fill-transparent"
         />
         <circle
-          cx="70" 
-          cy="70" 
+          cx="70"
+          cy="70"
           r="70"
           className="stroke-[#616161] stroke-[15] fill-transparent"
           style={{ strokeDasharray: "440", strokeDashoffset }}
@@ -23,7 +23,9 @@ const CountdownCircle = ({ label, value, dotTransform, strokeDashoffset }) => {
       </svg>
       <div className="absolute text-center text-[#141418] font-bold text-lg sm:text-3xl">
         {value}
-        <span className="block text-[10px] font-bold -mt-2 sm:text-lg">{label}</span>
+        <span className="block text-[10px] font-bold -mt-2 sm:text-lg">
+          {label}
+        </span>
       </div>
       <div
         className="absolute w-full h-full rounded-full flex justify-center items-start overflow-visible"

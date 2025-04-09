@@ -28,12 +28,12 @@ const NavMenu = () => {
     {
       id: "Calculadora",
       icon: <Calculator className="icon-shadow lg:w-5 lg:h-5" />,
-      link: "/",
+      link: "#calcBTC",
     },
     {
       id: "Grafico",
       icon: <LineChart className="icon-shadow lg:w-5 lg:h-5" />,
-      link: "/",
+      link: "#chartBTC",
     },
     {
       id: "Directos",
@@ -142,6 +142,7 @@ const NavMenu = () => {
                 stiffness: 100,
                 damping: 10,
               }}
+              onClick={() => setIsOpen(false)}
             >
               {item.icon}
               <span>{item.id}</span>
