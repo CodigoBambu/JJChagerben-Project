@@ -15,11 +15,37 @@ import { motion } from "framer-motion";
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
+
+      const sectionOffsets = menuItem
+        .map((item) => {
+          const section = document.querySelector(item.link);
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            return {
+              id: item.id,
+              offsetTop: rect.top + window.scrollY,
+            };
+          }
+          return null;
+        })
+        .filter(Boolean);
+
+      const current = sectionOffsets.findLast(
+        (section) => window.scrollY >= section.offsetTop - 100
+      );
+
+      if (current) {
+        setActiveSection(current.id);
+      } else {
+        setActiveSection("");
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -38,22 +64,22 @@ const NavMenu = () => {
     {
       id: "Directos",
       icon: <Cast className="icon-shadow lg:w-5 lg:h-5" />,
-      link: "/",
+      link: "#liveStreams",
     },
     {
       id: "Trabaja Conmigo",
       icon: <Play className="icon-shadow lg:w-5 lg:h-5" />,
-      link: "/",
+      link: "#workWithMe",
     },
     {
       id: "Redes Sociales",
       icon: <UserRound className="icon-shadow lg:w-5 lg:h-5" />,
-      link: "/",
+      link: "#redes",
     },
     {
       id: "Mercaderia",
       icon: <ShoppingCart className="icon-shadow lg:w-5 lg:h-5" />,
-      link: "/",
+      link: "#merch",
     },
   ];
 
@@ -101,7 +127,9 @@ const NavMenu = () => {
             <motion.a
               key={item.id}
               href={item.link}
-              className="flex items-center space-x-2 text-shadow lg:text-[15px] font-bold hover:text-white hover:scale-108 transition-all duration-500"
+              className={`flex items-center space-x-2 text-shadow lg:text-[15px] font-bold hover:text-white hover:scale-108 transition-all duration-500 ${
+                activeSection === item.id ? "text-white scale-110" : ""
+              }`}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
@@ -132,7 +160,9 @@ const NavMenu = () => {
             <motion.a
               key={item.id}
               href={item.link}
-              className="flex items-center justify-center space-x-2 text-shadow font-bold w-full text-center"
+              className={`flex items-center justify-center space-x-2 text-shadow font-bold w-full text-center ${
+                activeSection === item.id ? "text-white scale-110" : ""
+              }`}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : 50 }}
               transition={{

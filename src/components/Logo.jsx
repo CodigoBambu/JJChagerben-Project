@@ -1,14 +1,17 @@
 import React from "react";
 
-const Logo = () => {
+const Logo = ({ activeSection }) => {
   return (
-    <div className="flex items-center justify-center gap-2 group text-lg lg:text-lg z-10 hover:scale-105 transition-all duration-500">
+    <div
+      className={`flex text-black items-center justify-center gap-2 group text-lg lg:text-lg z-10 hover:scale-105 transition-all duration-500 ${
+        activeSection === "aboutMe" ? "text-white scale-110" : ""
+      }`}
+    >
       <svg
-        data-v-52a72b4a=""
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-8 h-20 -mr-1 text-[#141418] group-hover:text-gray-100 icon-shadow transition-colors duration-300 cursor-pointer md:w-8"
+        className="w-8 h-20 -mr-2 group-hover:text-gray-100 icon-shadow transition-colors duration-300 cursor-pointer md:w-8"
       >
         <path
           fillRule="evenodd"
@@ -17,10 +20,10 @@ const Logo = () => {
         ></path>
       </svg>
       <a
-        href="/"
-        className="text-[#141418] font-bold group-hover:text-gray-100 text-shadow transition-colors duration-200"
+        href="#aboutMe"
+        className="font-bold group-hover:text-gray-100 text-shadow transition-colors duration-200"
       >
-        CodigoBambu
+        JJChagerben
       </a>
     </div>
   );

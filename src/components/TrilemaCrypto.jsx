@@ -33,15 +33,15 @@ const TrilemaCrypto = () => {
     animate: { opacity: 1, y: 0 },
     transition: {
       type: "spring",
-      damping: 15,    
-      stiffness: 100,  
-      duration: 0.4,  
-      ease: "easeInOut", 
+      damping: 15,
+      stiffness: 100,
+      duration: 0.4,
+      ease: "easeInOut",
     },
   };
 
   return (
-    <div className="relative items-center justify-center py-10 my-10 text-shadow lg:bg-[#181818] lg:my-0">
+    <div className="relative items-center justify-center py-10 my-10 text-shadow lg:bg-[#222] lg:my-0">
       <div className="relative flex flex-col gap-6 cursor-pointer lg:flex-row lg:gap-0 lg:justify-center z-20">
         {trilemaItems.map((item, index) => (
           <FeatureItem
@@ -68,7 +68,7 @@ const FeatureItem = ({ item, index, animation }) => {
       variants={animation}
       transition={{
         ...animation.transition,
-        delay: index * 0.2, 
+        delay: index * 0.2,
       }}
       className="relative rounded-lg p-6 mx-5 box-shadow backdrop-blur-2xl hover:scale-105 transition-all duration-500 hover:text-white lg:-mt-35"
     >

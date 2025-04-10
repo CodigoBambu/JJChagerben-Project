@@ -6,7 +6,7 @@ import Button from "../components/Buttons";
 import {
   motion,
   AnimatePresence,
-  useViewportScroll,
+  useScroll,
   useTransform,
 } from "framer-motion";
 
@@ -18,7 +18,7 @@ const Header = () => {
     seconds: "00",
   });
   const [isVisible, setIsVisible] = useState(true);
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const headerOpacity = useTransform(scrollY, [0, 300], [1, 0]);
   const headerY = useTransform(scrollY, [0, 300], [0, -100]);
   const daysRef = useRef(null);
@@ -96,7 +96,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header bg-[url('/assets/background.webp')] bg-cover w-full box-shadow lg:h-[150vh]">
+    <header className="header bg-[url('/assets/background.webp')] bg-fixed bg-cover w-full box-shadow lg:h-[150vh]">
       <div className="z-50">
         <NavMenu />
       </div>

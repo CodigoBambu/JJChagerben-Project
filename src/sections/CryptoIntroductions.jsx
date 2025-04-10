@@ -1,7 +1,6 @@
-import React from "react";
+import { useRef, useState, useEffect } from "react";
 import cryptoImage from "/assets/btc.webp";
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
 
 const CryptopIntrudictions = () => {
   const ref = useRef(null);
@@ -59,7 +58,7 @@ const CryptopIntrudictions = () => {
   return (
     <section
       ref={ref}
-      className="text-center text-shadow bg-[#181818] pb-15 relative overflow-hidden"
+      className="text-center text-shadow bg-[#222] pb-15 relative overflow-hidden"
     >
       <div className="flex flex-col lg:flex-row justify-center items-center p-5 my-5 lg:mt-20">
         <motion.div
