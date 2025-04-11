@@ -84,16 +84,25 @@ const LiveSteams = () => {
         </ul>
         <div className="flex flex-col items-center w-full mt-4 lg:flex-row">
           <div className="flex justify-center">
-            <Buttons text="Youtube" />
-            <Buttons text="Twitch" />
+            <Buttons
+              text="Youtube"
+              className="bg-gray-800/20 hover:text-white"
+            />
+            <Buttons
+              text="Twitch"
+              className="bg-gray-800/20 hover:text-white"
+            />
           </div>
           <div className="flex justify-center">
-            <Buttons text="TikTok" />
+            <Buttons
+              text="TikTok"
+              className="bg-gray-800/20 hover:text-white"
+            />
           </div>
         </div>
       </motion.div>
       <motion.div
-        className="flex items-center justify-center"
+        className="flex justify-center mb-8"
         variants={slideInTop}
         initial="initial"
         animate={animateImage ? "animate" : "initial"}
@@ -102,7 +111,7 @@ const LiveSteams = () => {
         <img
           src={LivesIMG}
           alt="Lives Image"
-          className="box-shadow rounded-2xl h-auto object-cover mb-10"
+          className="box-shadow rounded-2xl h-auto mb-10"
         />
       </motion.div>
     </section>

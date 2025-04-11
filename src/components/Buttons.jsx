@@ -11,7 +11,7 @@ const Button = ({
   const defaultStyles = `
     px-8 py-4 font-bold rounded-xl relative z-20 m-5
     transition-all duration-500 cursor-pointer backdrop-blur-2xl
-    box-shadow hover:bg-black/40 text-white text-shadow hover:scale-105 hover:text-black
+    box-shadow hover:bg-black/40 text-shadow hover:scale-105
   `;
 
   const combinedStyles = `${defaultStyles} ${className}`;

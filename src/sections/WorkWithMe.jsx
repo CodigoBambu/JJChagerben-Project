@@ -82,7 +82,6 @@ const WorkWithMe = () => {
           className="box-shadow rounded-2xl h-auto w-[80%]"
         />
       </motion.div>
-
       <motion.div
         className="flex flex-col justify-center items-center w-full mb-8 lg:w-1/2 lg:items-start lg:text-left lg:mb-0 lg:pl-8"
         variants={slideInTop}
@@ -102,7 +101,7 @@ const WorkWithMe = () => {
           ))}
         </ul>
         <div className="mt-4 lg:mt-8">
-          <Buttons text="Grupo de Editores" />
+          <Buttons text="Grupo de Editores" className="hover:text-white" />
         </div>
       </motion.div>
     </section>

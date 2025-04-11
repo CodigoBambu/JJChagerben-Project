@@ -10,12 +10,24 @@ import {
   useTransform,
 } from "framer-motion";
 
-const Header = () => {
+const Hero = () => {
   const [timeData, setTimeData] = useState({
     days: "00",
     hours: "00",
     minutes: "00",
     seconds: "00",
+    transforms: {
+      days: "",
+      hours: "",
+      minutes: "",
+      seconds: "",
+    },
+    offsets: {
+      days: "",
+      hours: "",
+      minutes: "",
+      seconds: "",
+    },
   });
   const [isVisible, setIsVisible] = useState(true);
   const { scrollY } = useScroll();
@@ -32,16 +44,7 @@ const Header = () => {
 
   useEffect(() => {
     const endDate = "04/13/2028 00:00:00";
-    startCountdown(endDate, setTimeData, {
-      daysRef,
-      hoursRef,
-      minutesRef,
-      secondsRef,
-      dayDotRef,
-      hourDotRef,
-      minDotRef,
-      secDotRef,
-    });
+    startCountdown(endDate, setTimeData);
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -115,37 +118,33 @@ const Header = () => {
               variants={itemVariants}
             >
               <CountdownCircle
-                id="days"
                 label="Días"
                 value={timeData.days}
-                dotTransform={`rotateZ(${timeData.days * 0.986}deg)`}
-                strokeDashoffset={440 - (440 * timeData.days) / 365}
+                dotTransform={timeData.transforms.days}
+                strokeDashoffset={timeData.offsets.days}
               />
               <CountdownCircle
-                id="hours"
                 label="Horas"
                 value={timeData.hours}
-                dotTransform={`rotateZ(${timeData.hours * 15}deg)`}
-                strokeDashoffset={440 - (440 * timeData.hours) / 24}
+                dotTransform={timeData.transforms.hours}
+                strokeDashoffset={timeData.offsets.hours}
               />
               <CountdownCircle
-                id="minutes"
                 label="Minutos"
                 value={timeData.minutes}
-                dotTransform={`rotateZ(${timeData.minutes * 6}deg)`}
-                strokeDashoffset={440 - (440 * timeData.minutes) / 60}
+                dotTransform={timeData.transforms.minutes}
+                strokeDashoffset={timeData.offsets.minutes}
               />
               <CountdownCircle
-                id="seconds"
                 label="Segundos"
                 value={timeData.seconds}
-                dotTransform={`rotateZ(${timeData.seconds * 6}deg)`}
-                strokeDashoffset={440 - (440 * timeData.seconds) / 60}
+                dotTransform={timeData.transforms.seconds}
+                strokeDashoffset={timeData.offsets.seconds}
               />
             </motion.div>
             <motion.div className="text-center" variants={itemVariants}>
               <motion.h1
-                className="text-3xl text-shadow font-bold py-3 sm:text-5xl lg:text-7xl"
+                className="text-3xl text-shadow font-bold py-3 px-4 sm:text-5xl lg:text-7xl"
                 variants={itemVariants}
               >
                 <strong className="text-white">Bitcoin</strong> es{" "}
@@ -154,7 +153,7 @@ const Header = () => {
                 <strong className="text-white">Camara Lenta</strong>
               </motion.h1>
               <motion.h2
-                className="text-shadow font-semibold py-3"
+                className="text-shadow w-5/6 font-semibold py-3 lg:w-2/3 mx-auto"
                 variants={itemVariants}
               >
                 No importa el día ni el momento en que lo leas,{" "}
@@ -172,7 +171,11 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button text="Mentoria Premium" to="/" />
+              <Button
+                text="Mentoria Premium"
+                to="/"
+                className="text-black hover:text-white"
+              />
             </motion.div>
           </motion.section>
         )}
@@ -181,4 +184,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Hero;

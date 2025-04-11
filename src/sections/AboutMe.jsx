@@ -101,7 +101,7 @@ const AboutMe = () => {
             </li>
           ))}
         </ul>
-        <Button text="Redes Sociales" />
+        <Button text="Redes Sociales" className="hover:text-white" />
       </motion.div>
       <motion.div
         className="flex justify-center items-center lg:w-1/3 lg:justify-end lg:pl-8"

@@ -74,7 +74,7 @@ const NavMenu = () => {
     {
       id: "Redes Sociales",
       icon: <UserRound className="icon-shadow lg:w-5 lg:h-5" />,
-      link: "#redes",
+      link: "#socialMedia",
     },
     {
       id: "Mercaderia",
