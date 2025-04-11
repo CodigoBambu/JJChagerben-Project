@@ -10,22 +10,37 @@ import AboutMe from "./sections/AboutMe";
 import Lives from "./sections/LiveSteams";
 import WorkWithMe from "./sections/WorkWithMe";
 import SocialMedia from "./sections/SocialMedia";
+import MerchSection from "./sections/Merch";
+import PriceContent from "./sections/Prices";
+import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
 
   return (
     <>
-      <CursorEffect />
-      <Hero />
-      <TrilemaCrypto />
-      <CryptopIntrudictions />
-      <CalcBTC />
-      <ChartBTC />
-      <AboutMe />
-      <Lives />
-      <WorkWithMe />
-      <SocialMedia />
+      {isLoading ? (
+        <LoadingScreen onLoadingComplete={handleLoadingComplete} />
+      ) : (
+        <>
+          <CursorEffect />
+          <Hero />
+          <TrilemaCrypto />
+          <CryptopIntrudictions />
+          <CalcBTC />
+          <ChartBTC />
+          <AboutMe />
+          <Lives />
+          <WorkWithMe />
+          <SocialMedia />
+          <MerchSection />
+          <PriceContent />
+        </>
+      )}
     </>
   );
 }

@@ -79,7 +79,7 @@ const NavMenu = () => {
     {
       id: "Mercaderia",
       icon: <ShoppingCart className="icon-shadow lg:w-5 lg:h-5" />,
-      link: "#merch",
+      link: "#merchBTC",
     },
   ];
 

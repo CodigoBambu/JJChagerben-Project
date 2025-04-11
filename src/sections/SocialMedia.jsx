@@ -80,7 +80,7 @@ const SocialMedia = () => {
   return (
     <motion.section
       id="socialMedia"
-      className="social-media relative w-full min-h-screen z-10 text-black text-shadow font-bold overflow-hidden bg-[url('/assets/background-redes.webp')] bg-cover bg-no-repeat justify-center content-center"
+      className="social-media relative w-full min-h-screen pb-10 z-10 text-black text-shadow font-bold overflow-hidden bg-[url('/assets/background-redes.webp')] bg-cover bg-no-repeat justify-center content-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
