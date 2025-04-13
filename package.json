@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "jjchagerben-react",
+=======
+  "name": "jjchagerben-v3.0",
+>>>>>>> develop
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.474.0",
     "react": "^18.3.1",
@@ -36,5 +41,25 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.5"
+=======
+    "@tailwindcss/vite": "^4.1.3",
+    "framer-motion": "^12.6.3",
+    "lucide-react": "^0.487.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "vite": "^6.2.0"
+>>>>>>> develop
   }
 }
