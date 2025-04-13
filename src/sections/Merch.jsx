@@ -87,7 +87,11 @@ const MerchSection = () => {
   const tallas = ["S", "M", "L", "XL", "XXL"];
 
   return (
-    <section ref={ref} id="merchBTC" className="content-center py-20 h-full">
+    <section
+      ref={ref}
+      id="merchBTC"
+      className="content-center py-20 h-full bg-[#222] "
+    >
       <motion.div
         initial="initial"
         animate={isInView ? "animate" : "exit"}
@@ -121,8 +125,6 @@ const MerchSection = () => {
                     {product.name}
                   </h3>
                 </div>
-
-                {/* Detalles (hover/clic) */}
                 <div
                   className={`absolute inset-0 backdrop-blur-2xl bg-opacity-90 flex flex-col items-center justify-center p-4 transition-opacity duration-300 
                     ${

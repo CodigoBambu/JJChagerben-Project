@@ -173,7 +173,7 @@ const Hero = () => {
             >
               <Button
                 text="Mentoria Premium"
-                internalLink="price"
+                internalLink="sectionPricing"
                 className="text-black hover:text-white"
               />
             </motion.div>

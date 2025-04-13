@@ -30,8 +30,10 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="w-50 h-40"
+          className="w-auto h-auto" // Remove fixed width and height from Tailwind classes
           style={{
+            width: '15vw', // Ajusta este valor según el tamaño deseado relativo al ancho de la ventana
+            height: 'auto', // Mantiene la proporción original
             color: `rgb(${Math.floor((0 * progress) / 100)}, ${Math.floor(
               (0 * progress) / 0
             )}, ${Math.floor((255 * progress) / 100)})`,

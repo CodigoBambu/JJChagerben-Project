@@ -11,7 +11,7 @@ import Lives from "./sections/LiveSteams";
 import WorkWithMe from "./sections/WorkWithMe";
 import SocialMedia from "./sections/SocialMedia";
 import MerchSection from "./sections/Merch";
-import PriceContent from "./sections/Prices";
+import SectionPricing from "./sections/Pricing";
 import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
@@ -37,8 +37,8 @@ function App() {
           <Lives />
           <WorkWithMe />
           <SocialMedia />
+          <SectionPricing />
           <MerchSection />
-          <PriceContent />
         </>
       )}
     </>
