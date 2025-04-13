@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { BTCPriceDisplay } from "../components/common/BTCPriceDisplay";
-import { HalvingInfo } from "../components/common/HalvingInfo";
-import { InvestmentInputs } from "../components/common/InvestmentInputs";
-import { ProjectionTable } from "../components/common/ProjectionTable";
-import Modal from "../components/common/Modal";
-import { Info } from "lucide-react";
-=======
 import { useState, useEffect, useRef } from "react";
 import { BTCPriceDisplay } from "../components/Calculator/BTCPriceDisplay";
 import { HalvingInfo } from "../components/Calculator/HalvingInfo";
@@ -14,20 +5,13 @@ import { InvestmentInputs } from "../components/Calculator/InvestmentInputs";
 import { ProjectionTable } from "../components/Calculator/ProjectionTable";
 import Modal from "../components/Calculator/Modal";
 import { BadgeAlert, TriangleAlert } from "lucide-react";
->>>>>>> develop
 import {
   getCurrentHalvingInfo,
   calculateRetirementHalving,
   generateHalvingTable,
-<<<<<<< HEAD
-} from "../utils/bitcoinCalculations";
-
-const Index = () => {
-=======
 } from "../scripts/CalculateBTC";
 
 const CalcBTC = () => {
->>>>>>> develop
   const [btcPrice, setBtcPrice] = useState(0);
   const [investment, setInvestment] = useState(0);
   const [currentHalving, setCurrentHalving] = useState(getCurrentHalvingInfo());
@@ -37,9 +21,6 @@ const CalcBTC = () => {
     blockReward: 0,
   });
   const [projections, setProjections] = useState([]);
-<<<<<<< HEAD
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-=======
   const [isModalOpen, setIsModalOpen] = useState(false);
   const leftContainerRef = useRef(null);
   const rightContainerRef = useRef(null);
@@ -53,7 +34,6 @@ const CalcBTC = () => {
     alert: false,
   });
   const [isProjectionVisible, setIsProjectionVisible] = useState(false);
->>>>>>> develop
 
   useEffect(() => {
     const fetchPrice = async () => {
@@ -74,44 +54,6 @@ const CalcBTC = () => {
   useEffect(() => {
     setRetirementHalving(calculateRetirementHalving(investment));
     setProjections(generateHalvingTable(investment, btcPrice));
-<<<<<<< HEAD
-  }, [investment, btcPrice]);
-
-  return (
-    <div
-      id="calcBTC"
-      className="min-h-screen mt-1 mb-5 bg-[#141418] p-4 md:p-8"
-    >
-      <div className="mx-auto max-w-7xl">
-        <h1 className="calc-text mb-8 text-center text-3xl font-bold text-white">
-          Calculadora de Inversión en Bitcoin
-        </h1>
-        <div className="calc-content calc-text bg-[#1b1b20] text-white p-4 rounded-lg mt-4 mb-10 text-center">
-          Estos valores son especulativos de forma estática sobre un modelo
-          estático, pueden cambiar si cambian las condiciones de mercado.
-        </div>
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="relative calc-content space-y-6 rounded-xl bg-[#1b1b20] p-10 shadow-lg">
-            <div className="absolute right-4 top-4">
-              <button
-                onClick={() => setIsDialogOpen(true)}
-                className="calc-content border p-2 rounded transition-transform duration-300 ease-in-out hover:scale-[1.05]"
-                aria-label="Abrir información sobre la calculadora"
-              >
-                <Info className="h-4 w-4 text-white" />
-              </button>
-            </div>
-
-            <Modal
-              isDialogOpen={isDialogOpen}
-              setIsDialogOpen={setIsDialogOpen}
-            />
-
-            <BTCPriceDisplay />
-
-            <div className="space-y-4">
-              <h2 className="calc-text text-xl font-semibold text-white ">
-=======
     setIsProjectionVisible(investment > 0);
   }, [investment, btcPrice]);
 
@@ -223,7 +165,6 @@ const CalcBTC = () => {
                 <BadgeAlert className="w-6 h-6 -mt-17.5 text-black icon-shadow" />
               </button>
               <h2 className="text-xl font-semibold text-[#141418] text-shadow">
->>>>>>> develop
                 Calculadora de Inversión
               </h2>
               <InvestmentInputs
@@ -232,10 +173,6 @@ const CalcBTC = () => {
                 onUsdChange={setInvestment}
               />
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> develop
             <div className="grid gap-4 sm:grid-cols-2">
               <HalvingInfo
                 title="Halving Actual"
@@ -249,14 +186,6 @@ const CalcBTC = () => {
               />
             </div>
           </div>
-<<<<<<< HEAD
-
-          <div className="calc-content rounded-xl bg-[#141418] p-6 shadow-lg">
-            <h2 className="calc-text mb-4 text-xl font-semibold text-white">
-              Proyecciones de Inversión
-            </h2>
-            {investment > 0 && <ProjectionTable projections={projections} />}
-=======
           <div
             ref={rightContainerRef}
             className="rounded-xl box-shadow bg-transparent p-6"
@@ -268,7 +197,6 @@ const CalcBTC = () => {
             {isProjectionVisible && (
               <ProjectionTable projections={projections} />
             )}
->>>>>>> develop
           </div>
         </div>
       </div>
@@ -276,8 +204,4 @@ const CalcBTC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Index;
-=======
 export default CalcBTC;
->>>>>>> develop

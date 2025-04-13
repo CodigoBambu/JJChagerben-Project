@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "jjchagerben-react",
-=======
   "name": "jjchagerben-v3.0",
->>>>>>> develop
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,34 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "locomotive-scroll": "^4.1.4",
-    "lucide-react": "^0.474.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-locomotive-scroll": "^0.2.2",
-    "react-router-dom": "^7.1.3"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.26.4",
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.26.3",
-    "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react": "^4.3.4",
-    "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.6",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.14.0",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17",
-    "vite": "^6.0.5"
-=======
     "@tailwindcss/vite": "^4.1.3",
     "framer-motion": "^12.6.3",
     "lucide-react": "^0.487.0",
@@ -60,6 +28,5 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
->>>>>>> develop
   }
 }
