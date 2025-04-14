@@ -13,6 +13,7 @@ import SocialMedia from "./sections/SocialMedia";
 import MerchSection from "./sections/Merch";
 import SectionPricing from "./sections/Pricing";
 import LoadingScreen from "./components/LoadingScreen";
+import NavMenu from "./components/NavMenu";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,7 @@ function App() {
       ) : (
         <>
           <CursorEffect />
+          <NavMenu />
           <Hero />
           <TrilemaCrypto />
           <CryptopIntrudictions />

@@ -73,7 +73,7 @@ const AboutMe = () => {
     <section
       ref={ref}
       id="aboutMe"
-      className="flex flex-col lg:flex-row w-full py-30 min-h-screen bg-[#222] items-center justify-center text-white p-4"
+      className="flex flex-col lg:flex-row w-full py-30 min-h-screen bg-[#3b3b3b] items-center justify-center text-white p-4"
     >
       <motion.div
         className="flex justify-center items-center  mb-8 lg:w-1/3 lg:justify-start lg:mb-0 lg:pr-8"

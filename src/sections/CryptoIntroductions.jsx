@@ -58,7 +58,7 @@ const CryptopIntrudictions = () => {
   return (
     <section
       ref={ref}
-      className="text-center text-shadow bg-[#222] pb-15 relative overflow-hidden"
+      className="text-center text-shadow bg-[#3b3b3b] pb-15 relative overflow-hidden"
     >
       <div className="flex flex-col lg:flex-row justify-center items-center p-5 my-5 lg:mt-20">
         <motion.div

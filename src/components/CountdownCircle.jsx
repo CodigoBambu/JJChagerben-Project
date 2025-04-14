@@ -17,17 +17,17 @@ const CountdownCircle = ({
           cx="70"
           cy="70"
           r="70"
-          className="stroke-[#252525] stroke-[15] fill-transparent"
+          className="stroke-[#585858] stroke-[15] fill-black/40 backdrop-blur-2xl"
         />
         <circle
           cx="70"
           cy="70"
           r="70"
-          className="stroke-[#616161] stroke-[15] fill-transparent"
+          className="stroke-[#a8a8a8] stroke-[15] fill-transparent"
           style={{ strokeDasharray: "440", strokeDashoffset }}
         />
       </svg>
-      <div className="absolute text-center text-[#141418] font-bold text-lg sm:text-3xl">
+      <div className="absolute text-center font-bold text-lg sm:text-3xl">
         {value}
         <span className="block text-[10px] font-bold -mt-2 sm:text-lg">
           {label}
@@ -38,7 +38,7 @@ const CountdownCircle = ({
         style={{ transform: dotTransform }}
         ref={dotRef}
       >
-        <div className="absolute w-2 h-2 rounded-full bg-[#979797] top-[calc(-30px*0.057)] sm:top-[calc(-60px*0.057)] sm:w-3.5 sm:h-3.5" />
+        <div className="absolute w-2 h-2 rounded-full bg-[#a8a8a8] top-[calc(-30px*0.057)] sm:top-[calc(-60px*0.057)] sm:w-3.5 sm:h-3.5" />
       </div>
     </div>
   );

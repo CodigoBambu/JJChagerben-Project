@@ -41,7 +41,7 @@ const TrilemaCrypto = () => {
   };
 
   return (
-    <div className="relative items-center justify-center py-10 my-10 text-shadow lg:bg-[#222] lg:my-0">
+    <div className="relative items-center justify-center py-10 my-10 text-shadow lg:bg-[#3b3b3b] lg:my-0">
       <div className="relative flex flex-col gap-6 cursor-pointer lg:flex-row lg:gap-0 lg:justify-center z-20">
         {trilemaItems.map((item, index) => (
           <FeatureItem
@@ -70,7 +70,7 @@ const FeatureItem = ({ item, index, animation }) => {
         ...animation.transition,
         delay: index * 0.2,
       }}
-      className="relative rounded-lg p-6 mx-5 box-shadow backdrop-blur-2xl hover:scale-105 transition-all duration-500 hover:text-white lg:-mt-35"
+      className="relative rounded-lg p-6 mx-5 box-shadow bg-black/50 backdrop-blur-2xl hover:scale-105 transition-all duration-500 hover:text-white hover:bg-black/20 lg:-mt-35"
     >
       {item.icon}
       <h3 className="text-xl font-semibold mt-4">

@@ -5,7 +5,6 @@
 html,
 body {
   overflow-x: hidden;
-  overflow-y: auto;
   height: auto;
   width: 100%;
   margin: 0;
@@ -23,28 +22,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: #0f0f0f;
-}
-
-.header {
-  height: 150vh;
-  overflow: hidden;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150vh;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.8) 80%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
-  z-index: 1;
+  background-color: #252525;
 }
 
 /* Shadows */
@@ -77,23 +55,8 @@ body {
   animation: border-circle 1.5s infinite alternate;
 }
 
-/* Animations */
-
-@keyframes border-circle {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.822),
-      0 0 20px rgba(179, 179, 179, 0.829), 0 0 40px rgba(116, 116, 116, 0.863);
-  }
-
-  50% {
-    box-shadow: 0 0 20px rgb(235, 235, 235), 0 0 30px rgba(187, 187, 187, 0.836),
-      0 0 50px rgba(136, 136, 136, 0.795);
-  }
-
-  100% {
-    box-shadow: 0 0 10px rgba(228, 228, 228, 0.808), 0 0 20px rgb(102, 102, 102),
-      0 0 40px rgba(143, 143, 143, 0.801);
-  }
+.merch-img-shadow {
+  animation: merch-neon 3s infinite;
 }
 
 /* Social Media */
@@ -137,9 +100,28 @@ body {
   animation: desaparecer 4s forwards;
   transform: translate(-50%, -50%);
   font-family: "Courier New", Courier, monospace;
-  z-index: 99999;
+  z-index: 9999;
   animation: flotar 3s linear forwards;
   overflow: hidden;
+}
+
+/* Animations */
+
+@keyframes border-circle {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.822),
+      0 0 20px rgba(179, 179, 179, 0.829), 0 0 40px rgba(116, 116, 116, 0.863);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgb(235, 235, 235), 0 0 30px rgba(187, 187, 187, 0.836),
+      0 0 50px rgba(136, 136, 136, 0.795);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(228, 228, 228, 0.808), 0 0 20px rgb(102, 102, 102),
+      0 0 40px rgba(143, 143, 143, 0.801);
+  }
 }
 
 @keyframes flotar {
@@ -150,5 +132,20 @@ body {
   100% {
     opacity: 0;
     transform: translateY(-20px) scale(0.8);
+  }
+}
+
+@keyframes merch-neon {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px rgba(131, 131, 131))
+      drop-shadow(0 0 10px rgba(102, 102, 102, 0.61))
+      drop-shadow(0 0 15px rgba(94, 94, 94));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 10px rgba(131, 131, 131))
+      drop-shadow(0 0 20px rgba(102, 102, 102, 0.61))
+      drop-shadow(0 0 10px rgba(94, 94, 94));
   }
 }
