@@ -67,7 +67,7 @@ const WorkWithMe = () => {
     <section
       ref={ref}
       id="workWithMe"
-      className="flex flex-col w-full min-h-screen p-4 text-center text-shadow text-black font-bold bg-[#222] lg:flex-row lg:items-center lg:justify-between"
+      className="flex flex-col w-full min-h-screen p-4 text-center text-shadow text-black font-bold bg-[#3b3b3b] lg:flex-row lg:items-center lg:justify-between"
     >
       <motion.div
         className="flex justify-center mb-8 lg:justify-start lg:mb-0 lg:ml-8 order-last lg:order-first"

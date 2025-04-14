@@ -90,7 +90,7 @@ const MerchSection = () => {
     <section
       ref={ref}
       id="merchBTC"
-      className="content-center py-20 h-full bg-[#222] "
+      className="content-center py-20 h-full bg-[#3b3b3b] "
     >
       <motion.div
         initial="initial"
@@ -99,7 +99,6 @@ const MerchSection = () => {
         className="py-10 px-4 text-black text-shadow font-bold"
       >
         <h2 className="text-3xl font-bold text-center mb-10">Merch Oficial</h2>
-
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatePresence>
             {visibleProducts.map((product, i) => (
@@ -111,13 +110,13 @@ const MerchSection = () => {
                 exit="exit"
                 variants={slideInEach}
                 onClick={() => isMobile && toggleProduct(product.id)}
-                className="group relative box-shadow-animated rounded-2xl shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-102 cursor-pointer"
+                className="group relative box-shadow-animated rounded-2xl bg-black/30 overflow-hidden transform transition-transform duration-300 hover:scale-102 cursor-pointer"
               >
                 <div className="flex justify-center items-center h-[300px]">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-[300px] h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-[300px] h-[300px] object-cover merch-img-shadow transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-4">
@@ -126,7 +125,7 @@ const MerchSection = () => {
                   </h3>
                 </div>
                 <div
-                  className={`absolute inset-0 backdrop-blur-2xl bg-opacity-90 flex flex-col items-center justify-center p-4 transition-opacity duration-300 
+                  className={`absolute inset-0 backdrop-blur-2xl bg-black/20 bg-opacity-90 flex flex-col items-center justify-center p-4 transition-opacity duration-300 
                     ${
                       isMobile
                         ? activeProductId === product.id

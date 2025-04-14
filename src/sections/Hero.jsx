@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { startCountdown } from "../scripts/CountDownLogic";
 import CountdownCircle from "../components/CountdownCircle";
-import NavMenu from "../components/NavMenu";
 import Button from "../components/Buttons";
 import {
   motion,
@@ -9,6 +8,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import "../styles/HeaderBG.css";
 
 const Hero = () => {
   const [timeData, setTimeData] = useState({
@@ -99,14 +99,25 @@ const Hero = () => {
   };
 
   return (
-    <header className="header bg-[url('/assets/background.webp')] bg-fixed bg-cover w-full box-shadow lg:h-[150vh]">
-      <div className="z-50">
-        <NavMenu />
+    <header className="header relative bg-fixed bg-cover w-full box-shadow">
+      <div className="area z-10">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
       <AnimatePresence>
         {isVisible && (
           <motion.section
-            className="absolute top-80 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full max-w-screen-xl mb-20"
+            className="absolute top-90 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center w-full max-w-screen-xl mb-20 sm:mt-10 lg:top-75"
             variants={containerVariants}
             initial="hidden"
             animate="visible"

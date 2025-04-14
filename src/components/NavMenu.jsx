@@ -84,10 +84,10 @@ const NavMenu = () => {
   ];
 
   return (
-    <nav className="relative p-4 z-30 -mb-5">
+    <nav className="relative z-30 -mb-5">
       <div
         className={`fixed -top-2 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled ? "backdrop-blur-md bg-black/40 shadow-md" : "bg-transparent"
+          scrolled ? "backdrop-blur-md bg-black/40 box-shadow" : "bg-transparent"
         } flex justify-between items-center`}
       >
         <motion.div
