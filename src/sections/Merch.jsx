@@ -4,6 +4,7 @@ import Button from "../components/Buttons";
 
 const MerchSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [activeProduct, setActiveProduct] = useState(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -40,6 +41,10 @@ const MerchSection = () => {
 
   const tallas = ["S", "M", "L", "XL", "XXL"];
 
+  const toggleProduct = (id) => {
+    setActiveProduct((prev) => (prev === id ? null : id));
+  };
+
   return (
     <section id="merchBTC" className="content-center py-20 h-full bg-[#3b3b3b]">
       <motion.div
@@ -56,6 +61,7 @@ const MerchSection = () => {
               variants={containerVariants}
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
+              onClick={() => toggleProduct(product.id)}
               className="group relative box-shadow-animated rounded-2xl bg-black/30 overflow-hidden transform transition-transform duration-300 hover:scale-102 cursor-pointer"
             >
               <div className="flex justify-center items-center h-[300px]">
@@ -70,7 +76,17 @@ const MerchSection = () => {
                   {product.name}
                 </h3>
               </div>
-              <div className="absolute inset-0 backdrop-blur-2xl bg-black/20 bg-opacity-90 flex flex-col items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div
+                className={`
+                  absolute inset-0 backdrop-blur-2xl bg-black/20 bg-opacity-90 
+                  flex flex-col items-center justify-center p-4 transition-opacity duration-300
+                  ${
+                    activeProduct === product.id
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
+                  }
+                `}
+              >
                 <h3 className="mb-2">{product.name}</h3>
                 <div className="flex flex-wrap gap-2 justify-center">
                   <h4 className="mt-1">Tallas</h4>
