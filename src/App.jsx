@@ -14,6 +14,7 @@ import MerchSection from "./sections/Merch";
 import SectionPricing from "./sections/Pricing";
 import LoadingScreen from "./components/LoadingScreen";
 import NavMenu from "./components/NavMenu";
+import GoTop from "./components/GoTop";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +42,7 @@ function App() {
           <SocialMedia />
           <SectionPricing />
           <MerchSection />
+          <GoTop />
         </>
       )}
     </>

@@ -123,7 +123,8 @@ const SocialMedia = () => {
             >
               <img
                 src={item.background}
-                alt={item.title}
+                alt=""
+                aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover transition duration-500 ease-in-out group-hover:blur-sm z-0 pointer-events-none"
               />
               <h3 className="relative z-10 text-black text-xl p-6 group-hover:text-white transition-all duration-300">

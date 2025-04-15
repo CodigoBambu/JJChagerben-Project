@@ -100,8 +100,8 @@ const WorkWithMe = () => {
             </li>
           ))}
         </ul>
-        <div className="mt-4 lg:mt-8">
-          <Buttons text="Grupo de Editores" className="hover:text-white" />
+        <div className="mt-4 lg:mt-8 hover:scale-105 transition-all duration-300">
+          <Buttons text="Grupo de Editores" className="hover:text-white" externalLink="https://api.whatsapp.com/send?phone=593961612048" />
         </div>
       </motion.div>
     </section>

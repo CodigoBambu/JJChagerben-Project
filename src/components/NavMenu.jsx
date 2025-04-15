@@ -87,7 +87,9 @@ const NavMenu = () => {
     <nav className="relative z-30 -mb-5">
       <div
         className={`fixed -top-2 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled ? "backdrop-blur-md bg-black/40 box-shadow" : "bg-transparent"
+          scrolled
+            ? "backdrop-blur-md bg-black/40 box-shadow"
+            : "bg-transparent"
         } flex justify-between items-center`}
       >
         <motion.div
@@ -114,7 +116,10 @@ const NavMenu = () => {
             duration: 0.5,
           }}
         >
-          <button onClick={() => setIsOpen(!isOpen)}>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          >
             {isOpen ? (
               <X className="w-8 h-8 -mr-2 mt-2" />
             ) : (
