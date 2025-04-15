@@ -1,12 +1,22 @@
-# React + Vite
+# Crypto Halving Landing – Proyecto Web Interactivo (JJChagerben Web)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación es una landing page interactiva, ligera y optimizada, diseñada para ofrecer una experiencia de usuario fluida y enfocada en el mundo cripto.
 
-Currently, two official plugins are available:
+## Stack utilizado:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠️ **React**  
+🎨 **Tailwind CSS**  
+🌀 **Framer Motion**  
+⚙️ **Lógica personalizada con JavaScript**
 
-## Expanding the ESLint configuration
+## Características principales:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⏳ **Cuenta regresiva**: 100% personalizada para el próximo halving con lógica de tiempo extendido, animación visual dinámica y diseño responsive.  
+🧮 **Calculadora de inversión**: Estima posibles años de jubilación (estos datos son meramente especulativos).  
+🌐 **Rendimiento excelente**: Optimización de la web con métricas Lighthouse de alto rendimiento.  
+⚡ **Componentes reutilizables**: Bien estructurados y con separación clara entre secciones, scripts y estilos.  
+📱 **Responsiva**: Completamente optimizada para dispositivos móviles.
+
+## Resultado:
+
+Una web sostenible, optimizada para producción, con un enorme potencial educativo y comercial.

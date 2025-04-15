@@ -87,16 +87,19 @@ const LiveSteams = () => {
             <Buttons
               text="Youtube"
               className="bg-gray-800/20 hover:text-white"
+              externalLink="https://www.youtube.com/@jjchagerben"
             />
             <Buttons
               text="Twitch"
               className="bg-gray-800/20 hover:text-white"
+              externalLink="https://www.twitch.tv/jjchagerben"
             />
           </div>
           <div className="flex justify-center">
             <Buttons
               text="TikTok"
               className="bg-gray-800/20 hover:text-white"
+              externalLink="https://www.tiktok.com/@jjchagerben753"
             />
           </div>
         </div>
